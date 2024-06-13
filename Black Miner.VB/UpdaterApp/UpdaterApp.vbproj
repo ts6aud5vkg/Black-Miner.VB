@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F11C0E21-6182-4A82-B7AD-83A5DF8A438F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UpdaterApp</RootNamespace>
+    <AssemblyName>UpdaterApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>UpdaterApp.ico</ApplicationIcon>
+    <StartupObject>Software.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.29\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackMiner\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlackMiner\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlackMiner\Properties\Resources.vb" />
+    <Compile Include="BlackMiner\Properties\Settings.Designer.vb">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Software\demo.Designer.vb">
+      <DependentUpon>demo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\demo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormFive.Designer.vb">
+      <DependentUpon>FormFive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormFive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormFour.Designer.vb">
+      <DependentUpon>FormFour.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormFour.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormInitial.Designer.vb">
+      <DependentUpon>FormInitial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormInitial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormOne.Designer.vb">
+      <DependentUpon>FormOne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormOne.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormSix.Designer.vb">
+      <DependentUpon>FormSix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormSix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormThree.Designer.vb">
+      <DependentUpon>FormThree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormThree.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\FormTwo.Designer.vb">
+      <DependentUpon>FormTwo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\FormTwo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\info.Designer.vb">
+      <DependentUpon>info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Software\info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software\Program.vb" />
+    <Compile Include="Software\Update.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BlackMiner\Properties\Resources.resources" />
+    <EmbeddedResource Include="Software\demo.resources" />
+    <EmbeddedResource Include="Software\FormFive.resources" />
+    <EmbeddedResource Include="Software\FormFour.resources" />
+    <EmbeddedResource Include="Software\FormInitial.resources" />
+    <EmbeddedResource Include="Software\FormOne.resources" />
+    <EmbeddedResource Include="Software\FormSix.resources" />
+    <EmbeddedResource Include="Software\FormThree.resources" />
+    <EmbeddedResource Include="Software\FormTwo.resources" />
+    <EmbeddedResource Include="Software\info.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="BlackMiner\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
